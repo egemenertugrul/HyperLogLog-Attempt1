@@ -11,12 +11,12 @@ static char dna_sequence[] = "AGAAGGACGAGTCACCATGTACCAATAGCGATAACGATCGGTCGGACTAT
 int dna_sequence_size = ((sizeof(char))* (sizeof(dna_sequence))) - 1;
 
 
-int main(){
-	
+int main() {
+
 	HyperLogLog hello(5);
-	
-	
-	hello.Add(dna_sequence,dna_sequence_size);
+
+
+	hello.Add(dna_sequence, dna_sequence_size);
 	hello.EstimationEQ();
 	hello.Print();
 
